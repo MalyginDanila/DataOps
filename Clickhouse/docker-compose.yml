@@ -1,0 +1,15 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    environment:
+      CLICKHOUSE_USER: magomed
+      CLICKHOUSE_PASSWORD: 123456
+    ports:
+      - "8123:8123"
+    restart: unless-stopped
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./users.xml:/etc/clickhouse-server/users.d/users.xml
+
+volumes:
+  clickhouse_data:

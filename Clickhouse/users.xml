@@ -1,0 +1,30 @@
+<clickhouse>
+    <users>
+        <admin>
+            <password>admin111</password>
+            <access_management>1</access_management>
+            <profile>default</profile>
+            <quota>default</quota>
+        </admin>
+
+        <ddl_reader>
+            <password>123456</password>
+            <profile>default</profile>
+            <quota>default</quota>
+            <permissions>
+                <permission>CREATE TABLE</permission>
+                <permission>SELECT</permission>
+            </permissions>
+        </ddl_reader>
+
+        <writer_dropper>
+            <password>654321</password>
+            <profile>default</profile>
+            <quota>default</quota>
+            <permissions>
+                <permission>DROP TABLE</permission>
+                <permission>INSERT</permission>
+            </permissions>
+        </writer_dropper>
+    </users>
+</clickhouse>
