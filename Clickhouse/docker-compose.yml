@@ -1,9 +1,6 @@
 services:
   clickhouse:
     image: clickhouse/clickhouse-server:latest
-    environment:
-      CLICKHOUSE_USER: magomed
-      CLICKHOUSE_PASSWORD: 123456
     ports:
       - "8123:8123"
     restart: unless-stopped
